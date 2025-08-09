@@ -21,12 +21,11 @@
 
 ## Code
 > [!NOTE]
-> We are diligently organizing and annotating the code to ensure its readability and reproducibility. The official code will be released in this repository shortly. Thank you for your patience!
+> We are diligently organizing and annotating the code to ensure its readability and reproducibility. The official code will be released in this repository shortly. 
 > 
 > Thank you for your patience!
 
 ## Citation
-If you find our work useful for your research, please consider citing:
 ```bibtex
 @misc{liu2025sgad,
       title={SGAD: Semantic and Geometric-aware Descriptor for Local Feature Matching}, 
