@@ -82,8 +82,8 @@ const con_and_corresponding_author =
 
 // 邮箱地址
 const emails = [
-  "xzliu@xidian.edu.cn",
-  "chiwang@stu.xidian.edu.cn"
+  "chiwang@stu.xidian.edu.cn",
+  "xzliu@xidian.edu.cn"
 ]
 
 // 强调内容
@@ -195,9 +195,7 @@ const buttons = [
 
     <!-- 邮箱 -->
     <el-row justify="center" class="email-row">
-        <!-- 邮箱图标 -->
         <el-icon :size="16" color="#606266" style="margin-right: 8px;"><Message /></el-icon>
-        <!-- 循环渲染邮箱地址 -->
         <template v-for="(email, index) in emails" :key="email">
             <a :href="'mailto:' + email" class="email-link">{{ email }}</a>
             <span v-if="index < emails.length - 1" class="email-separator">,</span>
