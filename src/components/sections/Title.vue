@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import { ElIcon } from 'element-plus'
-import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
+import { Document, Files, MagicStick, Picture, DataAnalysis, Film, Message } from '@element-plus/icons-vue'
 import GithubIcon from '@/components/sections/GithubIcon.vue'
 import ArxivIcon from '@/components/sections/ArxivIcon.vue'
 import PdfIcon from '@/components/sections/PdfIcon.vue'
@@ -79,6 +79,12 @@ const addresses = [
 // 共一和通讯提示
 const con_and_corresponding_author =
   "*Equal Contribution.   †Corresponding Author."
+
+// 邮箱地址
+const emails = [
+  "xzliu@xidian.edu.cn",
+  "chiwang@stu.xidian.edu.cn"
+]
 
 // 强调内容
 const emphases = [
@@ -185,6 +191,17 @@ const buttons = [
     <!-- 共一和通讯提示内容 -->
     <el-row justify="center" class="con-cor">
         {{ con_and_corresponding_author }}
+    </el-row>
+
+    <!-- 邮箱 -->
+    <el-row justify="center" class="email-row">
+        <!-- 邮箱图标 -->
+        <el-icon :size="16" color="#606266" style="margin-right: 8px;"><Message /></el-icon>
+        <!-- 循环渲染邮箱地址 -->
+        <template v-for="(email, index) in emails" :key="email">
+            <a :href="'mailto:' + email" class="email-link">{{ email }}</a>
+            <span v-if="index < emails.length - 1" class="email-separator">,</span>
+        </template>
     </el-row>
 
     <!-- 提供引导按钮 -->
@@ -316,6 +333,31 @@ a:hover {
 a {
 	text-decoration: None;
 	color: inherit;
+}
+
+/* 邮箱区域样式 */
+.email-row {
+  display: flex;
+  align-items: center;
+  margin-top: -10px; /* 微调与上方元素的间距 */
+  margin-bottom: 25px; /* 增加与下方按钮的间距 */
+}
+
+/* 邮箱链接样式 */
+.email-link {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #337ab7; /* 标准链接蓝色 */
+  text-decoration: none;
+}
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* 邮箱分隔符样式 */
+.email-separator {
+  margin: 0 8px;
+  color: #606266;
 }
 
 </style>
