@@ -1,0 +1,14 @@
+# Abstract
+Local feature matching remains a fundamental challenge in computer vision.
+Recent Area to Point Matching (A2PM) methods have improved matching accuracy. 
+However, existing research based on this framework relies on inefficient pixel-level comparisons and complex graph matching that limit scalability.
+In this work, we introduce the Semantic and Geometric-aware Descriptor Network (SGAD), which fundamentally rethinks area-based matching by generating highly 
+discriminative area descriptors that enable direct matching without complex graph optimization. 
+This approach significantly improves both accuracy and efficiency of area matching. 
+We further improve the performance of area matching through a novel supervision strategy 
+that decomposes the area matching task into classification and ranking subtasks. 
+Finally, we introduce the Hierarchical Containment Redundancy Filter (HCRF) to eliminate overlapping areas by analyzing containment graphs.
+SGAD demonstrates remarkable performance gains, reducing runtime by 60$\times$ (0.82s$~vs.~$60.23s) compared to MESA. 
+Extensive evaluations show consistent improvements across multiple point matchers: 
+SGAD+LoFTR reduces runtime compared to DKM, while achieving higher accuracy (0.82s$~vs.~$1.51s, 65.98$~vs.~$61.11) in outdoor pose estimation, 
+and SGAD+ROMA delivers +7.39\% AUC@5$^\circ$ in indoor pose estimation, establishing a new state-of-the-art.

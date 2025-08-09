@@ -1,0 +1,39 @@
+<script>
+import Title from './sections/Title.vue'
+import Abstract from './sections/Abstract.vue'
+import Markdown from './sections/Markdown.vue'
+import BibTeX from './sections/BibTeX.vue'
+import Carousel from './sections/Carousel.vue'
+import ImageSlider from './sections/ImageSlider.vue'
+import ImageSliderInner from './sections/ImageSliderInner.vue'
+import ImageSelector from './sections/ImageSelector.vue'
+import Echart from './sections/Echart.vue'
+import Table from './sections/Table.vue'
+import Collapse from './sections/Collapse.vue'
+import SeletionForComparison from './sections/SeletionForComparison.vue'
+import Latex from './sections/Latex.vue'
+import Model3D from './sections/Model3D.vue'
+import GaussianSplats3D from './sections/GaussianSplats3D.vue'
+import Teaser from './sections/Teaser.vue'
+import Method from './sections/Method.vue'
+
+export default {
+  components: {
+    Title,
+    Teaser,
+    Abstract,
+    Method,
+    BibTeX,
+    ImageSelector
+  }
+}
+</script>
+
+<template>
+  <Title/>
+  <Teaser/>
+  <Abstract/>
+  <Method/>
+  <ImageSelector/>
+  <BibTeX/>
+</template>
