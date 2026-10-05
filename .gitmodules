@@ -1,0 +1,15 @@
+[submodule "point_matchers/DKM"]
+	path = point_matchers/DKM
+	url = https://github.com/Parskatt/DKM.git
+[submodule "point_matchers/LoFTR"]
+	path = point_matchers/LoFTR
+	url = https://github.com/zju3dv/LoFTR.git
+[submodule "point_matchers/RoMa"]
+	path = point_matchers/RoMa
+	url = https://github.com/Parskatt/RoMa.git
+[submodule "point_matchers/SuperGluePretrainedNetwork"]
+	path = point_matchers/SuperGluePretrainedNetwork
+	url = https://github.com/magicleap/SuperGluePretrainedNetwork.git
+[submodule "segmentor/SAM"]
+	path = segmentor/SAM
+	url = https://github.com/facebookresearch/segment-anything.git

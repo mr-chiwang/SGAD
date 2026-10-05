@@ -1,0 +1,40 @@
+_target_: geo_area_matchers.egam.EGeoAreaMatcher
+datasetName: 'MegaDepth'
+
+area_from_size_W: 1296
+area_from_size_H: 968
+
+crop_size_W: 640
+crop_size_H: 640
+
+area_crop_size_W: 640
+area_crop_size_H: 640
+
+crop_from_size_W: 1296
+crop_from_size_H: 968
+
+eval_from_size_W: 1296
+eval_from_size_H: 968
+
+std_match_num: 1000
+alpha_list: #[0.5, 2.0, 3.0, 5.0, 10.0]
+  - 0.5
+  - 2.0
+  - 3.0
+  - 3.5
+  - 5.0
+valid_inside_area_match_num: 100
+# Split thresholds (default: keep original behavior).
+# - min_area_matches_for_geom: minimum in-area matches before estimating E/F (pre-MAGSAC)
+# - min_inliers_for_geom: minimum inliers after MAGSAC when accepting E/F
+min_area_matches_for_geom: ${.valid_inside_area_match_num}
+min_inliers_for_geom: ${.valid_inside_area_match_num}
+# Fixed corrected geometry and standard GridFill pipeline.
+reject_out_area_flag: 0
+crop_mode: 0
+sac_mode: 'MAGSAC'
+
+occ_size: 1
+common_occ_flag: 1
+
+verbose: 0

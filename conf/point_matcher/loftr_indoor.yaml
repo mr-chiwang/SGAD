@@ -1,0 +1,6 @@
+_target_: point_matchers.loftr.LoFTRMatcher
+
+config_path: ${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/point_matchers/LoFTR/configs
+weights: ${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/point_matchers/LoFTR/weights/indoor_ds_new.ckpt
+dataset_name: ??? # ScanNet or ETH3D or KITTI
+cross_domain: False

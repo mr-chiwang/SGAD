@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a2pm-sgad"
+version = "0.1.0"
+description = "SGAD and SGAD++ region matching"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.urls]
+Homepage = "https://mr-chiwang.github.io/SGAD/"
+Repository = "https://github.com/mr-chiwang/SGAD"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sgad*"]

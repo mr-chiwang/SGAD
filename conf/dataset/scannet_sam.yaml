@@ -1,0 +1,20 @@
+_target_: dataloader.scannet.ScanNetDataloader
+
+root_path: ${oc.env:A2PM_SCANNET1500_ROOT,"${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/data/testdata/scannet_test_1500"}
+
+color_folder: color
+color_post: jpg
+depth_folder: depth
+depth_post: png
+depth_factor: 1000.0
+K_folder: intrinsic
+pose_folder: pose
+pose_post: txt
+
+# Precomputed bounding boxes in the 640 x 480 coordinate space.
+bbox_root: ${oc.env:A2PM_SCANNET1500_BBOX_ROOT,"${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/assets/a2pm_bboxes/scannet1500/640x480"}
+bbox_post: npy
+
+scene_name: ???
+image_name0: ???
+image_name1: ???

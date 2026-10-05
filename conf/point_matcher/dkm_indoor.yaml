@@ -1,0 +1,4 @@
+_target_: point_matchers.dkm.DKMMatcher
+
+dataset_name: ScanNet
+weights: ${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/point_matchers/DKM/weights/DKMv3_indoor.pth

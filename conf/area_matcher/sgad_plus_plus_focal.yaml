@@ -1,0 +1,19 @@
+_target_: area_matchers.sgad.SgadAreaMatcher
+
+W: 1296
+H: 968
+level_num: 4
+level_step: [560, 390, 256, 130, 0]
+datasetName: ???
+draw_verbose: 0
+
+model_variant: sgad_plus_plus_focal
+weights: ${oc.env:A2PM_SGAD_PLUS_PLUS_FOCAL_WEIGHTS,null}
+
+hcrf: False
+hcrf_overlap_threshold: 0.9
+hcrf_coverage_threshold: 0.4
+
+pretrained_root: ${oc.env:A2PM_PRETRAINED_ROOT,"${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/pretrained"}
+pred_score_threshold: 0.001
+areagraph_overrides: ${oc.select:areagraph,${oc.select:dataset._area_graph,{}}}

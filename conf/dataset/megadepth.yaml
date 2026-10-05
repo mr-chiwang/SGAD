@@ -1,0 +1,11 @@
+_target_: dataloader.megadepth.MegaDepthDataloader
+
+root_path: ${oc.env:A2PM_MEGADEPTH1500_ROOT,"${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/data/testdata/megadepth_test_1500"}
+
+scene_name: ???
+image_name0: ???
+image_name1: ???
+
+# Precomputed bounding boxes in the 1296 x 968 coordinate space.
+bbox_root: ${oc.env:A2PM_MEGADEPTH1500_BBOX_ROOT,"${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/assets/a2pm_bboxes/megadepth1500/1296x968"}
+bbox_post: npy

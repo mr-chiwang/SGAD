@@ -1,0 +1,7 @@
+# @package areagraph
+fs_overlap_thd: 0.8
+preprocesser_config:
+  min_area_size: 9000
+  max_wh_ratio: 4.0
+  topK: 3
+  min_dist_thd: 100

@@ -1,0 +1,10 @@
+_target_: point_matchers.roma.RoMaMatcher
+
+dataset_name: MegaDepth
+weights: ${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/point_matchers/RoMa/weights/roma_outdoor.pth
+dinov2_weights: ${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/point_matchers/RoMa/weights/dinov2_vitl14_pretrain.pth
+coarse_res: 560
+upsample_res: 864
+
+# coarse_res: 672
+# upsample_res: 1344

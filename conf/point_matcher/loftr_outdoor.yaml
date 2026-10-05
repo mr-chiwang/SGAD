@@ -1,0 +1,6 @@
+_target_: point_matchers.loftr.LoFTRMatcher
+
+config_path: ${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/point_matchers/LoFTR/configs
+weights: ${oc.env:A2PM_SGAD_ROOT,${hydra:runtime.cwd}}/point_matchers/LoFTR/weights/outdoor_ds.ckpt
+dataset_name: ??? 
+cross_domain: False

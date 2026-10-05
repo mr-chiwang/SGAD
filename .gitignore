@@ -1,1 +1,77 @@
-node_modules
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
+/AGENTS.md
+/CLAUDE.md
+*.swp
+*.swo
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# Experiment outputs / logs
+# =========================
+logs/
+log/
+tb_logs/
+runs/
+wandb/
+outputs/
+res/
+scripts/outputs/
+scripts/**/outputs/
+dump/
+
+# =========================
+# Data / checkpoints / weights
+# =========================
+data/
+assets/*
+!assets/pairs/
+assets/pairs/*
+!assets/pairs/scannet1500_pairs.txt
+!assets/pairs/megadepth1500_pairs.txt
+pretrained/
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.engine
+
+# Third-party matcher artifacts
+point_matchers/**/weights/
+point_matchers/**/models/weights/
+point_matchers/**/data/
+point_matchers/**/datasets/
+point_matchers/**/outputs/
+point_matchers/**/logs/
+point_matchers/**/wandb/
+
+# =========================
+# Archives
+# =========================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+testAG/
